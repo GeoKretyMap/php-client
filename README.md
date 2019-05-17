@@ -12,13 +12,13 @@ This project embeds a PHP client class for [GeoKrety Map](https://geokretymap.or
 
 * Installation
 
-- [GeoKretyMap/php-client on Packagist](https://packagist.org/packages/GeoKretyMap/php-client)
+- [geokretymap/php-client on Packagist](https://packagist.org/packages/geokretymap/php-client)
 - [GeoKretyMap/php-client on GitHub](https://github.com/GeoKretyMap/php-client)
 
 From the command line run
 
 ```
-$ composer require GeoKretyMap/php-client
+$ composer require geokretymap/php-client
 ```
 
 ## How to contribute
