@@ -13,3 +13,13 @@ script:
 - vendor/bin/phpunit
 # minimal code coverage : 50% (xdebug needed)
 - php coverage-checker.php clover.xml 50
+
+notifications:
+    # doc: https://docs.travis-ci.com/user/notifications/#configuring-irc-notifications
+    irc:
+        channels:
+        - "chat.freenode.net#geokrety"
+        on_success: always
+        on_failure: always
+        template:
+        - "%{build_url} GKM PHP CLIENT %{build_number} | %{branch} - %{commit} | %{result}"
