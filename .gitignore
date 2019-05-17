@@ -1,0 +1,14 @@
+*~
+*.swp
+*.swo
+.svn
+.well-known
+*.dont-push.*
+.idea/
+*.iml
+.project
+.buildpath
+.settings
+.php_cs.cache
+# please use 'composer install' to generate vendor/
+vendor/
