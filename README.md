@@ -1,6 +1,11 @@
 # GeoKrety Map PHP Client
 
 
+[![Build Status](https://travis-ci.org/GeoKretyMap/php-client.svg)](https://travis-ci.org/GeoKretyMap/php-client)
+[![Latest Stable Version](https://poser.pugx.org/geokretymap/php-client/v/stable.png)](https://packagist.org/packages/geokretymap/php-client)
+[![Total Downloads](https://poser.pugx.org/geokretymap/php-client/downloads.png)](https://packagist.org/packages/geokretymap/php-client)
+
+
 ## Introduction
 
 This project embeds a PHP client class for [GeoKrety Map](https://geokretymap.org/) (aka. GKM) service.
