@@ -1,5 +1,5 @@
 {
-  "name": "GeoKretyMap/php-client",
+  "name": "geokretymap/php-client",
   "description": "GeokretyMap PHP Client - https://geokretymap.org/",
   "keywords": ["php", "rest", "api", "geokrety", "geokretymap"],
   "license": "MIT",
