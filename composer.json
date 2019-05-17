@@ -1,0 +1,24 @@
+{
+  "name": "GeoKretyMap/php-client",
+  "description": "GeokretyMap PHP Client - https://geokretymap.org/",
+  "keywords": ["php", "rest", "api", "geokrety", "geokretymap"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Brice Vandeputte",
+      "email": "boly38@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+	"phpunit/phpunit": "~5.7"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  }
+}
