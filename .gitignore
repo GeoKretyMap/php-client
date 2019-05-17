@@ -12,3 +12,4 @@
 .php_cs.cache
 # please use 'composer install' to generate vendor/
 vendor/
+clover.xml
