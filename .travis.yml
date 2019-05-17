@@ -8,4 +8,8 @@ before_script:
   - curl -s http://getcomposer.org/installer | php
   - php composer.phar install
 
-script: vendor/bin/phpunit
+script:
+# unit tests with phpunit.xml as input
+- vendor/bin/phpunit
+# minimal code coverage : 50% (xdebug needed)
+- php coverage-checker.php clover.xml 50
