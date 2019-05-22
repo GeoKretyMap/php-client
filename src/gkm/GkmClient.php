@@ -25,6 +25,11 @@ class GkmClient {
         return $this->get($this->gkmApiEndpoint.'/gk/'.$geokretyId);
     }
 
+    public function getBasicGeokretyByIds($arrayOfGeokretyIds) {
+        $commaSeparatedIds = implode (",", $arrayOfGeokretyIds);
+        return $this->get($this->gkmApiEndpoint.'/export2.php?gkid='.$commaSeparatedIds);
+    }
+
     public function getFullGeokretyById($geokretyId) {
         return $this->get($this->gkmApiEndpoint.'/gk/'.$geokretyId.'/details');
     }
