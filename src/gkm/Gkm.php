@@ -2,13 +2,11 @@
 
 namespace Gkm;
 
-
 use Gkm\GkmClient;
+use Gkm\Service\BasicGeokretyXmlParser;
 use Gkm\Domain\GeoKrety;
 use Gkm\Domain\GeokretyNotFoundException;
-use GuzzleHttp; // http://docs.guzzlephp.org/en/stable/
-use GuzzleHttp\Psr7; // https://packagist.org/packages/guzzlehttp/psr7
-use GuzzleHttp\Exception\ClientException; //  thrown for 400 level errors (cf quickstart)
+
 
 /**
  * Gkm : GeoKretyMap
@@ -27,11 +25,27 @@ class Gkm {
                 throw new GeokretyNotFoundException();
             }
             $responseBodyString = (string) $response->getBody();
-            if (strpos($responseBodyString, '<geokrety/>') !== false) {
-              throw new GeokretyNotFoundException();
+            $arrayOfGeokrety = BasicGeokretyXmlParser::parse($responseBodyString);
+            if (count($arrayOfGeokrety) == 0) {
+                throw new GeokretyNotFoundException();
             }
-            $geokrety = new GeoKrety($responseBodyString);
-            return $geokrety;
+            return $arrayOfGeokrety[0];
+        } catch (ClientException $clientException) {
+            if ($clientException->getResponse()->getStatusCode() == 404) {
+                throw new GeokretyNotFoundException();
+            }
+            throw $clientException;
+        }
+    }
+
+    public function getGeokretyByIds($arrayOfGeokretyIds) {
+        try {
+            $response = $this->client->getBasicGeokretyByIds($arrayOfGeokretyIds);
+            if ($response->getStatusCode() != 200) {
+                throw new GeokretyNotFoundException();
+            }
+            $responseBodyString = (string) $response->getBody();
+            return BasicGeokretyXmlParser::parse($responseBodyString);
         } catch (ClientException $clientException) {
             if ($clientException->getResponse()->getStatusCode() == 404) {
                 throw new GeokretyNotFoundException();
