@@ -19,6 +19,9 @@
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
+            <exclude>
+                <file>src/gkm/GkmClient.php</file>
+            </exclude>
         </whitelist>
     </filter>
     <logging>

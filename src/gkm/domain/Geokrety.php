@@ -2,7 +2,7 @@
 
 namespace Gkm\Domain;
 
-class GeoKrety {
+class Geokrety {
     public $id;
     public $dateMoved;
     public $ownerName;

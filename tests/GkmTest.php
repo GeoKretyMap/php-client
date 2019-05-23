@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 use Gkm\Gkm;
 use Gkm\GkmClient;
-use Gkm\Domain\GeoKrety;
+use Gkm\Domain\Geokrety;
 
 class MockResponse {
     public function getBody() { return "body"; }
