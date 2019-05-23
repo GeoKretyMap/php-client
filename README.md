@@ -29,14 +29,36 @@ $ composer require geokretymap/php-client
 ## How to contribute
 
 
+### Dependencies
 * Install dependencies
 
 ```
  composer install
 ``` 
 
+* Install certificates bundle (used by https call)
+
+   * download the [certificate bundle](https://curl.haxx.se/docs/caextract.html)
+   * update your `php.ini` :
+
+```
+curl.cainfo="C:\CACERT\cacert-2019-05-15.pem"
+openssl.cafile="C:\CACERT\cacert-2019-05-15.pem"
+```
+
+### Sample
+* Execute sample
+
+```
+ php UsageSample.php
+``` 
+
+### Testing
+
 * Execute tests
 
 ```
  vendor/bin/phpunit
 ``` 
+
+NB: to activate *test code coverage* you will need to install and enable php [Xdebug extension](https://xdebug.org/docs/install).

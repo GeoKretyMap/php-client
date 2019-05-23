@@ -4,7 +4,7 @@ namespace Gkm;
 
 use Gkm\GkmClient;
 use Gkm\Service\BasicGeokretyXmlParser;
-use Gkm\Domain\GeoKrety;
+use Gkm\Domain\Geokrety;
 use Gkm\Domain\GeokretyNotFoundException;
 
 
